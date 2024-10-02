@@ -159,9 +159,9 @@ MonoBehaviour:
   MeshRenderer: {fileID: 226830467}
   RefMeshRenderer: {fileID: 894336378}
   SourceMesh: {fileID: -420844168480336442, guid: 4bfb17a88aa16f346a6da44ae049b7fe, type: 3}
-  TargetMesh: {fileID: -420844168480336442, guid: 4bd3c66dd7333fe449a0506891b4aa27, type: 3}
-  NormalBitCount: 8
+  NormalBitCount: 20
   TangentAngleBitCount: 8
+  TargetMesh: {fileID: 0}
 --- !u!4 &17752767
 Transform:
   m_ObjectHideFlags: 0
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 226830468}
   - component: {fileID: 226830467}
   m_Layer: 0
-  m_Name: TestMesh
+  m_Name: TargetMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,7 +358,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226830466}
-  m_Mesh: {fileID: -420844168480336442, guid: 4bd3c66dd7333fe449a0506891b4aa27, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!4 &226830469
 Transform:
   m_ObjectHideFlags: 0
@@ -544,8 +544,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
+  near clip plane: 0.01
+  far clip plane: 256
   field of view: 40
   orthographic: 0
   orthographic size: 5
@@ -897,16 +897,16 @@ RectTransform:
   m_GameObject: {fileID: 492909234}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3000001, y: 1.3000001, z: 1.3000001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2079294127}
   - {fileID: 419872618}
-  m_Father: {fileID: 1663164368}
+  m_Father: {fileID: 2042194554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.7320404, y: 245.0994}
+  m_AnchoredPosition: {x: 44.598457, y: -32.77133}
   m_SizeDelta: {x: 189.3915, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &492909236
@@ -1129,7 +1129,7 @@ GameObject:
   - component: {fileID: 894336379}
   - component: {fileID: 894336378}
   m_Layer: 0
-  m_Name: RefMesh
+  m_Name: SourceMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2252,7 +2252,6 @@ RectTransform:
   - {fileID: 1571871615}
   - {fileID: 2065366514}
   - {fileID: 1766313107}
-  - {fileID: 492909235}
   - {fileID: 2042194554}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2693,6 +2692,7 @@ RectTransform:
   m_Children:
   - {fileID: 1489881568}
   - {fileID: 1132829165}
+  - {fileID: 492909235}
   m_Father: {fileID: 1663164368}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
